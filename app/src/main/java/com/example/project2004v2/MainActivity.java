@@ -35,6 +35,95 @@ public class MainActivity extends AppCompatActivity {
         else {
             textView.setText(user.getEmail());
         }
+
+        btnAnalogClock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AnalogClockActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnBall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BallActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DaysActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDigits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DigitsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDigitsBackward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DigitsBackwardActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDirections.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DirectionsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMonths.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MonthsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMultiplication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MultiplicationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSeason.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SeasonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSimilarPictures.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SimilarPicturesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSpell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SpellActivity.class);
+                startActivity(intent);
+            }
+        });
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
