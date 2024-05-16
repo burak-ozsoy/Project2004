@@ -24,9 +24,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         auth = FirebaseAuth.getInstance();
+        Button btnAnalogClock, btnBall, btnDays, btnDigits, btnDigitsBackward, btnDirections, btnMonths, btnMultiplication, btnSeason, btnSimilarPictures, btnSpell;
         button = findViewById(R.id.logout);
-        textView = findViewById(R.id.user_details);
+        textView = findViewById(R.id.user_details); // TextView'yi bulmayı unutmayın
         user = auth.getCurrentUser();
+
+        btnAnalogClock = findViewById(R.id.btn_analog_clock);
+        btnBall = findViewById(R.id.btn_ball);
+        btnDays = findViewById(R.id.btn_days);
+        btnDigits = findViewById(R.id.btn_digits);
+        btnDigitsBackward = findViewById(R.id.btn_digits_backward);
+        btnDirections = findViewById(R.id.btn_directions);
+        btnMonths = findViewById(R.id.btn_months);
+        btnMultiplication = findViewById(R.id.btn_multiplication);
+        btnSeason = findViewById(R.id.btn_season);
+        btnSimilarPictures = findViewById(R.id.btn_similar_pictures);
+        btnSpell = findViewById(R.id.btn_spell);
+
         if (user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
@@ -35,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         else {
             textView.setText(user.getEmail());
         }
-
         btnAnalogClock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               FirebaseAuth.getInstance().signOut();
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
                 finish();
