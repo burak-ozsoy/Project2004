@@ -9,17 +9,41 @@ public class AnalogClockActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Button btnBackToMenu, btnLearn, btnPlay;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analog_clock);
 
-        Button btnBackToMenu = findViewById(R.id.btn_back_to_menu);
+        btnBackToMenu = findViewById(R.id.btn_back_to_menu);
+        btnLearn = findViewById(R.id.btn_learn);
+        btnPlay = findViewById(R.id.btn_play);
         btnBackToMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AnalogClockActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Bu activity'yi bitirir, böylece geri tuşuna basıldığında tekrar buraya dönülmez.
+                finish();
             }
         });
+
+        btnLearn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AnalogClockActivity.this, com.example.project2004v2.learn.AnalogClockLearnActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AnalogClockActivity.this, com.example.project2004v2.play.AnalogClockPlayActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }
