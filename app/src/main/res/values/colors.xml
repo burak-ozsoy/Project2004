@@ -8,5 +8,8 @@
     <color name="colorAccentDark">#018786</color>
     <color name="correct_color">#4CAF50</color>
     <color name="error_color">#F44336</color>
+    <color name="ball_color">#FF5722</color>
+    <color name="background_color">#FFFFFF</color>
+    <color name="text_color">#000000</color>
 
 </resources>
