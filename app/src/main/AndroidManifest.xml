@@ -66,6 +66,69 @@
         <activity
             android:name=".play.AnalogClockPlayActivity"
             android:exported="true" />
+        <activity
+            android:name=".play.BallPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.DaysPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.DigitsBackwardPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.DigitsPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.DirectionsPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.MonthsPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.MultiplicationPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.SeasonPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.SimilarPicturesPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".play.SpellPlayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.AnalogClockLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.BallLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.DaysLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.DigitsBackwardLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.DigitsLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.DirectionsLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.MonthsLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.MultiplicationLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.SeasonLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.SimilarPicturesLearnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".learn.SpellLearnActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

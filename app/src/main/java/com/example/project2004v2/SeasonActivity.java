@@ -9,10 +9,15 @@ public class SeasonActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Button btnBackToMenu, btnLearn, btnPlay;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_season);
 
-        Button btnBackToMenu = findViewById(R.id.btn_back_to_menu);
+        btnBackToMenu = findViewById(R.id.btn_back_to_menu);
+        btnLearn = findViewById(R.id.btn_learn);
+        btnPlay = findViewById(R.id.btn_play);
         btnBackToMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -21,5 +26,24 @@ public class SeasonActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnLearn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SeasonActivity.this, com.example.project2004v2.learn.SeasonLearnActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SeasonActivity.this, com.example.project2004v2.play.SeasonPlayActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }
