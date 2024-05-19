@@ -2,17 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".learn.SpellLearnActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7- Spell / Write (Learn)"
+        android:text="8- Spell (Learn)"
         android:textSize="24sp"
         android:textColor="#000000"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,22 +21,93 @@
         android:gravity="center"
         style="@style/Widget.MaterialComponents.TextView"/>
 
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Let's learn how to spell words correctly."
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <TextView
+        android:id="@+id/word_to_spell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A_P_P_L_E"
+        android:textSize="48sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/instruction_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <TextView
+        android:id="@+id/letter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textSize="36sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/word_to_spell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_letter"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Next Letter"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/letter_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_word"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF9800"
+        android:text="Next Word"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_next_letter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_go_back"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#FF5722"
         android:text="Go Back"
         android:textColor="#FFFFFF"
         app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_next_word"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.992"
         app:layout_constraintWidth_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
