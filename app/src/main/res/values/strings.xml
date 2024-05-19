@@ -33,4 +33,6 @@
     </string-array>
     <string name="digits_description">Remember the digits shown on the screen from the beginning to the end. Tap Next Digit to see the next digit in order.</string>
     <string name="digits_backward_description">Remember the digits shown on the screen in a backward manner. Tap Next Digit to see the next digit in order.</string>
+    <string name="directions_description">Learn the directions: left, right, up, down, in front of, behind.</string>
+    <string name="similar_pictures_description">Learn to identify similar pictures. Look at the examples below to see which pictures are similar.</string>
 </resources>
