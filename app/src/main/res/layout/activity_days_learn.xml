@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".learn.DaysLearnActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3- The Days of the Week (Learn)"
+        android:text="3- The Days Of The Week (Learn)"
         android:textSize="24sp"
         android:textColor="#000000"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,22 +22,64 @@
         android:gravity="center"
         style="@style/Widget.MaterialComponents.TextView"/>
 
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Learn the days of the week. Tap 'Next Day' to see the next day in order."
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <TextView
+        android:id="@+id/day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:textSize="48sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_day"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Next Day"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/day_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_go_back"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#FF5722"
         android:text="Go Back"
         android:textColor="#FFFFFF"
         app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_next_day"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.992"
         app:layout_constraintWidth_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
