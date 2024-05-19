@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".play.SeasonPlayActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2- The Seasons (Play)"
+        android:text="Play the Seasons"
         android:textSize="24sp"
         android:textColor="#000000"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,15 +20,116 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="16dp"
         android:gravity="center"
-        style="@style/Widget.MaterialComponents.TextView"/>
+        style="@style/Widget.MaterialComponents.TextView" />
 
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select the season that matches with the picture"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView" />
+
+    <ImageView
+        android:id="@+id/seasonImageView"
+        android:layout_width="325dp"
+        android:layout_height="325dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toBottomOf="@id/score_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Season Image" />
+
+    <Button
+        android:id="@+id/option1Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="Option 1"
+        android:backgroundTint="#4CAF50"
+        android:onClick="checkAnswer"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/seasonImageView"
+        app:layout_constraintBottom_toTopOf="@id/option2Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <Button
+        android:id="@+id/option2Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="Option 2"
+        android:onClick="checkAnswer"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/option3Button"
+        app:layout_constraintTop_toBottomOf="@id/option1Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <Button
+        android:id="@+id/option3Button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="checkAnswer"
+        android:text="Option 3"
+        app:layout_constraintBottom_toTopOf="@id/btn_go_back"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option2Button"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/feedback_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/option3Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_go_back"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#FF5722"
         android:text="Go Back"
         android:textColor="#FFFFFF"
@@ -36,8 +137,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.992"
         app:layout_constraintWidth_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

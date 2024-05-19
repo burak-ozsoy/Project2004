@@ -23,21 +23,125 @@
         style="@style/Widget.MaterialComponents.TextView"/>
 
 
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Learn the seasons with pictures. Look at the examples below to learn different seasons."
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+
+    <ImageView
+        android:id="@+id/spring"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/spring"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintBottom_toTopOf="@id/btn_next_example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:contentDescription="Spring picture"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/summer"
+        android:visibility="invisible"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/summer"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintBottom_toTopOf="@id/btn_next_example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:contentDescription="Summer picture"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/fall"
+        android:visibility="invisible"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/fall"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintBottom_toTopOf="@id/btn_next_example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:contentDescription="Fall picture"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/winter"
+        android:visibility="invisible"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/winter"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintBottom_toTopOf="@id/btn_next_example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:contentDescription="Winter picture"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/seasonTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SPRING"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/spring"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_example"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Next Example"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/seasonTextView"
+        app:layout_constraintBottom_toTopOf="@id/btn_go_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_go_back"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#FF5722"
         android:text="Go Back"
         android:textColor="#FFFFFF"
         app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_next_example"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.992"
         app:layout_constraintWidth_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
